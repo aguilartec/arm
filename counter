@@ -1,0 +1,9 @@
+		;		Otro ejemplo de un contador, en este caso hay un contador
+		;		descendiente en r1, y uno ascendente en r2
+		MOV		R0, #0
+		MOV		R1, #4
+		MOV		R2,#1
+again	SUBS		R1, R1, #1
+		ADD		R2, R2, #1
+		BNE		again
+		END

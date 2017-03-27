@@ -1,0 +1,6 @@
+; Uso de algunos operadores lógicos
+		
+		mov		r0, #7
+		mov		r1, #4
+		and		r2, r0, r1
+		orr		r2, r0, r1

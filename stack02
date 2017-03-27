@@ -1,0 +1,16 @@
+; Otro ejemplo de uso del stack
+
+		mov		r0, #4		; primer parametro
+		mov		r1, #5		; segundo parametro
+		mov		r4, #256  ; direccion de memoria
+		bl		hazsuma
+		str		r0, [r4]		; guardamos resultado
+		end
+		
+hazsuma
+		STMFD	r13!, {r4-r11} ; push
+		add		r0, r0, r1  ; realizar la operacion
+		mov		r4, #66 ; hacer algo con r4
+		mov		r5, #55 ; hacer algo con r5
+		LDMFD	r13!, {r4-r11} ; pop
+		mov		pc, r14 		; regresar

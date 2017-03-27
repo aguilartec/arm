@@ -1,0 +1,6 @@
+		;		Este programa hace un ciclo simple desde 10 hasta 1
+		MOV		R0, #0   ;
+		MOV		R1, #10
+again	SUBS		R1, R1, #1  ; Subs actualiza la bandera Z
+		BNE		again
+		END

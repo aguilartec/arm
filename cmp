@@ -1,0 +1,5 @@
+	; Ejemplo de CMP
+	
+		mov		r1, #6
+		mov		r2, #7
+		cmp		r1, r2  ; Actualizamos banderas con resultado r1-r2

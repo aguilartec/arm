@@ -1,0 +1,10 @@
+; Guardar y recuperar datos de memoria
+		mov		r0, #15
+		mov		r1, #256
+		str		r0, [r1]  ; guardar el contenido de r0 en la dirección r1
+		mov		r0, #23
+		mov		r1, #260
+		str		r0, [r1]
+		ldr		r3, [r1]   ; recuperar en r3 el contenido de la dirección r1
+		end
+		

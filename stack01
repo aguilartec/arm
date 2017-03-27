@@ -1,0 +1,16 @@
+; Uso del stack para guadar el valor de algunos registros
+; push guarda, pop restaura
+
+		mov		r4, #40
+		mov		r5, #50
+		mov		r6, #60
+		bl		sru
+		mov		r3, #45
+		end
+		
+sru		STMFD	r13!, {r4-r6}  ; push
+		mov		r4, #88 ; hacer algo con r4
+		mov		r5, #99 ; hacer algo con r5
+		mov		r6, #77
+		LDMFD	r13!, {r4-r5}  ; pop
+		mov		pc, r14

@@ -1,0 +1,17 @@
+; Ejemplo de llamada a subrutina
+
+			mov		r0, #10
+			mov		r1, #256
+			bl		misubrutina
+			mov		r0, #20
+			mov		r1, #260
+			bl		misubrutina
+			mov		r0, #30
+			mov		r1, #264
+			bl		misubrutina
+			end
+			
+; guarda en la dirección r1 el contenido de r0
+misubrutina
+			str		r0, [r1]
+			mov		pc, r14

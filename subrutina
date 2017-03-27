@@ -1,0 +1,14 @@
+; Otro ejemplo de subrutina
+		
+		mov		r8, #256
+		str		r14, [r8]
+		mov		r0, #4
+		mov		r1, #5
+		bl		sum  ;bl guarda pc en r14
+		str		r14, [r8]
+		mov		r3, #45
+		end
+		
+sum		
+		add		r2, r0, r1
+		mov		pc, r14 ; equivale a return

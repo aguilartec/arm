@@ -1,0 +1,10 @@
+		MOV		R0, #2
+		MOV		R1, #2
+		CMP		R0, R1
+		BMI		dif
+		CMP		R1, R0
+		BMI		dif
+		MOV		R2, #1
+		B		final
+dif		MOV		R2, #0
+final	END
